@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    svg {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <svg>
+    <!-- 動畫去綁定形狀 -->
+    <defs>
+      <animate dur="2s" attributeName="x" repeatCount="indefinite" to="100" xlink:href="#qq" />
+    </defs>
+    <rect width="60" height="60" x="50" y="50" fill="#0c0" id="qq">
+    </rect>
+    <rect width="60" height="60" x="50" y="50" fill="none" stroke="#000">
+    </rect>
+  </svg>
+  <hr>
+  <svg>
+    <!-- 說明attributeName對應的功能 -->
+    <rect width="60" height="60" x="50" y="50" fill="#c00">
+      <animate dur="2s" attributeName="x" repeatCount="indefinite" to="100" />
+    </rect>
+    <rect width="60" height="60" x="50" y="50" fill="none" stroke="#000">
+      <animate dur="2s" attributeName="y" repeatCount="indefinite" to="100" />
+    </rect>
+    <!--    可以追加設定 attributeType 預先說明attributeName的屬性是什麼 
+            但是預定會先找CSS 找不到再去找xml做對應應該只影響效能 -->
+  </svg>
+  <hr>
+  <svg>
+    <!-- values 可以給多個 value 會各自分配相同秒數 -->
+    <rect width="60" height="60" x="50" y="50" fill="#f80">
+      <animate dur="2s" attributeName="x" values="50;60;100" repeatCount="indefinite" />
+    </rect>
+    <rect width="60" height="60" x="50" y="50" fill="none" stroke="#000">
+      <animate dur="2s" attributeName="x" repeatCount="indefinite" to="100" />
+    </rect>
+  </svg>
+  <svg>
+    <!-- keyTimes 可以給與每個value各式佔據的比例，注意規格不符會被直接忽略　如前大於後 數值為 0-1-->
+    <rect width="60" height="60" x="50" y="50" fill="#c6c">
+      <animate dur="2s" attributeName="x" values="50;75;100" keyTimes="0;.9;1" repeatCount="indefinite" />
+    </rect>
+    <rect width="60" height="60" x="50" y="50" fill="none" stroke="#000">
+      <animate dur="2s" attributeName="x" repeatCount="indefinite" to="100" />
+    </rect>
+  </svg>
+  <svg>
+    <!-- 拉出一條貝茲曲線決定他執行的速率 不要忘記calcMode="spline" -->
+    <rect width="60" height="60" x="50" y="50" fill="#0cc">
+      <animate dur="2s" attributeName="x" to="100" keyTimes="0;1" keySplines="0 .75 .25 1" repeatCount="indefinite"
+        calcMode="spline" />
+    </rect>
+    <rect width="60" height="60" x="50" y="50" fill="none" stroke="#000">
+      <animate dur="2s" attributeName="x" repeatCount="indefinite" to="100" />
+    </rect>
+  </svg>
+  <!-- 
+
+    from
+
+    動畫起始時的屬性數值
+
+    to
+
+    動畫結束時的屬性數值
+
+    by
+
+    動畫相對於起始的屬性數值
+    這個我不太明白？？
+   -->
+  <hr>
+  <svg>
+    <!-- 
+      dur 是播放時間 
+      begin 是什麼時候開始
+      begin可以指定一般時間也可以指定某某動畫結束後開始 亦可以提前 第三個範例
+    -->
+    <rect width="60" height="60" x="50" y="50" fill="#0cc">
+      <animate id="a1" dur="2s" attributeName="x" to="100" />
+      <animate dur="2s" attributeName="y" to="100" begin="a1.end" />
+    </rect>
+    <rect width="60" height="60" x="150" y="50" fill="#f80">
+      <animate id="a1" dur="2s" attributeName="x" to="200" />
+      <animate dur="2s" attributeName="y" to="100" begin="a1.end+1s" />
+    </rect>
+    <rect width="60" height="60" x="250" y="50" fill="#c00">
+      <animate id="a1" dur="2s" attributeName="x" to="300" />
+      <animate dur="2s" attributeName="y" to="100" begin="a1.end-1s" />
+    </rect>
+  </svg>
+  <hr>
+
+</body>
+
+</html>

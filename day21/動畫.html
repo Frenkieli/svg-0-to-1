@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    svg {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <svg>
+    <!-- 這邊這個沒有次數概念所以不能重複撥放 -->
+    <rect width="50" height="50" x="10" y="10" fill="#c00">
+      <set attributeName="x" to="40" begin="2s" repeatCount="indefinite">
+    </rect>
+    <rect width="50" height="50" x="10" y="10" fill="none" stroke="#000" />
+  </svg>
+  <hr>
+  <svg>
+    <!-- 類似一般動畫 -->
+    <rect width="50" height="50" x="10" y="10" fill="#09c">
+      <animate attributeName="x" to="60" dur="2s" repeatCount="indefinite">
+    </rect>
+    <rect width="50" height="50" x="10" y="10" fill="none" stroke="#000" />
+  </svg>
+  <hr>
+  <svg>
+    <!-- 讓動畫跟隨著指定路線 -->
+    <!-- x y 軸會把　動畫軌跡 path當作 0 0 當作基點去做相對座標 -->
+    <rect width="20" height="10" x="0" y="-5" fill="#09c">
+      <animateMotion dur="5s"
+        path="M7.4,15.3c17,20.4,48.8,38,91.6,27.8c79.5-18.9,107.4,48.2,69.4,48.2c-33.9,0-15.2-58.1,65.4-41.7c26.2,5.3,63.2-19.1,79.1-34.3"
+        repeatCount="indefinite" rotate="auto" />
+    </rect>
+    <path fill="none" stroke="#000"
+      d="M7.4,15.3c17,20.4,48.8,38,91.6,27.8c79.5-18.9,107.4,48.2,69.4,48.2c-33.9,0-15.2-58.1,65.4-41.7c26.2,5.3,63.2-19.1,79.1-34.3" />
+  </svg>
+  <hr>
+  <svg>
+    <!-- 動畫變形 -->
+    <rect width="60" height="60" x="10" y="10" fill="#0c0">
+      <animateTransform dur="2s" attributeName="transform" repeatCount="indefinite" type="scale" from="1" to="0.5" />
+    </rect>
+    <rect width="60" height="60" x="10" y="10" fill="none" stroke="#000">
+  </svg>
+  <svg>
+    <rect width="60" height="60" x="50" y="50" fill="#0c0">
+      <!-- 圓心是 x + width / 2 這樣算出來的 -->
+      <animateTransform dur="2s" attributeName="transform" repeatCount="indefinite" type="rotate" from="0,80,80"
+        to="360,80,80" />
+    </rect>
+    <rect width="60" height="60" x="50" y="50" fill="none" stroke="#000">
+  </svg>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 這部份建議看網頁理解！可以更好理解 -->
+  <svg width="300" height="200" style="border:1px solid; background:#fff;" viewbox="0,0,100,160"
+    preserveAspectRatio="xMinYMin slice">
+    <rect width="40" height="30" x="0" y="0" fill="#c00">
+    </rect>
+    <rect width="40" height="30" x="60" y="0" fill="#f80">
+    </rect>
+    <rect width="40" height="30" x="0" y="130" fill="#09c">
+    </rect>
+    <rect width="40" height="30" x="60" y="130" fill="#0c0">
+    </rect>
+    <rect width="40" height="30" x="30" y="65" fill="#000">
+    </rect>
+  </svg>
+  <svg width="300" height="200" style="border:1px solid; background:#fff;" viewbox="0,0,100,160"
+    preserveAspectRatio="xMidYMid slice">
+    <rect width="40" height="30" x="0" y="0" fill="#c00">
+    </rect>
+    <rect width="40" height="30" x="60" y="0" fill="#f80">
+    </rect>
+    <rect width="40" height="30" x="0" y="130" fill="#09c">
+    </rect>
+    <rect width="40" height="30" x="60" y="130" fill="#0c0">
+    </rect>
+    <rect width="40" height="30" x="30" y="65" fill="#000">
+    </rect>
+  </svg>
+  <hr>
+
+  <!-- 這邊第一個視保留所有畫面直到其中一邊碰到視口 -->
+  <svg width="300" height="200" style="border:1px solid; background:#fff;" viewbox="0,0,120,120" preserveAspectRatio="xMinYMin meet">
+    <rect width="40" height="30" x="0" y="0" fill="#c00">  
+    </rect> 
+    <rect width="40" height="30" x="80" y="0" fill="#f80">  
+    </rect> 
+    <rect width="40" height="30" x="0" y="90" fill="#09c">  
+    </rect> 
+    <rect width="40" height="30" x="80" y="90" fill="#0c0">  
+    </rect> 
+    <rect width="40" height="30" x="40" y="45" fill="#000">  
+    </rect> 
+  </svg>
+  <!-- 這個是完全填滿超出的部分直接切掉 -->
+  <svg width="300" height="200" style="border:1px solid; background:#fff;" viewbox="0,0,120,120" preserveAspectRatio="xMidYMid slice">
+    <rect width="40" height="30" x="0" y="0" fill="#c00">  
+    </rect> 
+    <rect width="40" height="30" x="80" y="0" fill="#f80">  
+    </rect> 
+    <rect width="40" height="30" x="0" y="90" fill="#09c">  
+    </rect> 
+    <rect width="40" height="30" x="80" y="90" fill="#0c0">  
+    </rect> 
+    <rect width="40" height="30" x="40" y="45" fill="#000">  
+    </rect> 
+  </svg>
+</body>
+
+</html>

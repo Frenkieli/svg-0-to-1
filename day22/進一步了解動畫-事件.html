@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    svg {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <svg>
+    <!-- 還可以寫事件！綠色方塊是灰色方塊被點擊後開始 -->
+    <rect id="qq" width="120" height="30" x="50" y="10" fill="#aaa" />
+    <rect width="60" height="60" x="50" y="50" fill="#0c0">
+      <animate dur="2s" attributeName="x" to="100" begin="qq.click" />
+    </rect>
+  </svg>
+  <hr>
+  <svg>
+    <!-- 指定某某動畫重複幾次後執行 -->
+    <rect width="60" height="30" x="50" y="50" fill="#c00">
+      <animate id="r1" dur="1s" attributeName="width" to="120" repeatCount="indefinite" />
+      <animate dur="2s" attributeName="y" to="100" begin="r1.repeat(3)" />
+    </rect>
+  </svg>
+  <hr>
+  <!-- 還可以寫超連結執行動畫！？ -->
+  <svg>
+    <rect width="60" height="30" x="50" y="50" fill="#c00">
+      <animate id="a1" dur="2s" attributeName="y" to="100" begin="indefinite" repeatCount="indefinite" />
+    </rect>
+    <a xlink:href="#a1"><text x="50" y="30">開始動畫</text></a>
+  </svg>
+  <hr>
+  <svg>
+    <!-- 
+      min 看不出來
+      max 指定動畫最多播放多久
+      end 指定動畫什麼時候結束 跟 max 一樣會無視重複播放屬性結束動畫
+     -->
+    <rect width="60" height="60" x="50" y="50" fill="#c00">
+      <animate dur="4s" attributeName="x" repeatCount="indefinite" to="100" min="5" max="10s" />
+    </rect>
+    <rect width="60" height="60" x="50" y="50" fill="none" stroke="#000">
+      <animate dur="4s" attributeName="x" repeatCount="indefinite" to="100" />
+    </rect>
+  </svg>
+  <hr>
+  <svg>
+    <!-- 
+      restart 屬性
+      always        可以一直重新點
+      whenNotActive 直到本次動畫結束
+      never         不再重新觸發
+
+      repeatCount
+
+      動畫執行的次數，設定 indefinite 則是無限次循環。
+
+      repeatDur
+
+      動畫執行的時間，設定 indefinite 則是無限長。
+     -->
+    <rect width="30" height="30" x="50" y="50" fill="#c00">
+      <animate id="a11" dur="1s" attributeName="width" to="100" begin="indefinite" repeatCount="indefinite"
+        restart="never" max="3s" />
+    </rect>
+    <a xlink:href="#a11"><text x="50" y="30">開始動畫</text></a>
+  </svg>
+  <hr>
+  <svg>
+    <!-- fill 動畫的填充狀態 決定動畫結束的時候動畫在哪裡停止 -->
+    <rect width="60" height="60" x="50" y="50" fill="#c00">
+      <animate dur="2s" attributeName="x" to="100" fill="freeze" />
+    </rect>
+    <rect width="60" height="60" x="50" y="50" fill="none" stroke="#000">
+      <animate dur="2s" attributeName="x" to="100" fill="remove" />
+    </rect>
+  </svg>
+  <hr>
+  <svg height="200">
+    <!-- 
+      additive 決定給個相衝突的動畫之間的行為
+      replace 就是替換掉
+      sum     相加
+    -->
+    <rect width="60" height="60" x="50" y="50" fill="#069">
+      <animateTransform attributeName="transform" dur="2s" type="translate" from="50,50" to="-50,-50"
+        repeatCount="indefinite" additive="sum" />
+      <animateTransform attributeName="transform" dur="2s" type="scale" from="1" to="2" repeatCount="indefinite"
+        additive="sum" />
+      <animateTransform attributeName="transform" dur="2s" type="rotate" from="0,80,80" to="360,80,80"
+        repeatCount="indefinite" additive="sum" />
+    </rect>
+  </svg>
+  <svg>
+    <!-- 
+      accumulate 決定動畫結束後下一個動畫是否接續上一個動畫的狀態繼續進行
+      sum   是要    如果動畫是無限播放的放大動畫最後就會變得無限大= =
+      none  是不要  就重頭開始
+     -->
+    <rect width="10" height="10" x="0" y="0" fill="#069">
+      <animateTransform attributeName="transform" dur="2s" type="scale" from="1" to="2" repeatCount="indefinite"
+        accumulate="sum" />
+    </rect>
+    <rect width="10" height="10" x="0" y="0" fill="#c00">
+      <animateTransform attributeName="transform" dur="2s" type="scale" from="1" to="2" repeatCount="indefinite"
+        accumulate="none" />
+    </rect>
+  </svg>
+</body>
+
+</html>

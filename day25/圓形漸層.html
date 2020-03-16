@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    svg {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <svg>
+    <!-- 
+      cx 設定漸層X座標
+      cy 設定漸層Y座標
+      t  設定寬度 1等於圓形寬度
+     -->
+    <defs>
+      <radialGradient id="r1" cx=".5" cy=".5" r=".5">
+        <stop offset="0%" stop-color="#f80"></stop>
+        <stop offset="100%" stop-color="#fff"></stop>
+      </radialGradient>
+      <radialGradient id="r2" cx=".5" cy=".5" r=".5">
+        <stop offset="50%" stop-color="#f80"></stop>
+        <stop offset="100%" stop-color="#fff"></stop>
+      </radialGradient>
+      <radialGradient id="r3" cx=".9" cy=".9" r="1">
+        <stop offset="0%" stop-color="#f80"></stop>
+        <stop offset="100%" stop-color="#fff"></stop>
+      </radialGradient>
+    </defs>
+    <rect width="100" height="100" x="5" y="50" stroke="#000" fill="url(#r1)"></rect>
+    <rect width="100" height="100" x="115" y="50" stroke="#000" fill="url(#r2)"></rect>
+    <rect width="100" height="100" x="225" y="50" stroke="#000" fill="url(#r3)"></rect>
+  </svg>
+  <svg height="200">
+    <!-- 
+      fx 設定為圓心x座標
+      fy 設定為圓心y座標
+      直接看表現比較好理解
+     -->
+    <defs>
+      <radialGradient id="r11" cx=".5" cy=".5" r=".5">
+        <stop offset="0%" stop-color="#f00"></stop>
+        <stop offset="100%" stop-color="#ff0"></stop>
+      </radialGradient>
+      <radialGradient id="r22" cx=".5" cy=".5" r=".5" fx="1" fy=".5">
+        <stop offset="0%" stop-color="#f00"></stop>
+        <stop offset="100%" stop-color="#ff0"></stop>
+      </radialGradient>
+    </defs>
+    <rect width="150" height="150" x="5" y="10" stroke="#000" fill="url(#r11)"></rect>
+    <rect width="150" height="150" x="160" y="10" stroke="#000" fill="url(#r22)"></rect>
+  </svg>
+  <hr>
+  <svg>
+    <defs>
+      <radialGradient id="r111" cx=".5" cy=".5" r=".4" fx=".75" fy=".75" spreadMethod="reflect">
+        <stop offset="0%" stop-color="#f00"></stop>
+        <stop offset="100%" stop-color="#00f"></stop>
+      </radialGradient>
+      <radialGradient id="r222" cx=".5" cy=".5" r=".4" fx=".75" fy=".75" spreadMethod="repeat">
+        <stop offset="0%" stop-color="#f00"></stop>
+        <stop offset="100%" stop-color="#00f"></stop>
+      </radialGradient>
+    </defs>
+    <rect width="150" height="150" x="5" y="10" stroke="#000" fill="url(#r111)"></rect>
+    <rect width="150" height="150" x="160" y="10" stroke="#000" fill="url(#r222)"></rect>
+  </svg>
+  <hr>
+  <svg height="200">
+    <!-- 實際示範 -->
+    <defs>
+      <radialGradient id="r11111" cx=".3" cy=".3" r=".7">
+        <stop offset="0%" stop-color="#fff"></stop>
+        <stop offset="30%" stop-color="#9f9"></stop>
+        <stop offset="70%" stop-color="#373"></stop>
+        <stop offset="100%" stop-color="#000"></stop>
+      </radialGradient>
+    </defs>
+    <circle cx="85" cy="85" r="75" fill="url(#r11111)" />
+  </svg>
+</body>
+
+</html>

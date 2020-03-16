@@ -28,3 +28,16 @@
 >## [day 16 邊框線 Stroke-miterlimit 交接處尖角寬度](https://www.oxxostudio.tw/articles/201409/svg-16-storke-miterlimit.html)
 >> 此段著重在理解，查看該文章有充分文章說明
 >## [day 17 邊框線 Stroke-marker 起點 轉折處 終點圖片](https://www.oxxostudio.tw/articles/201409/svg-17-storke-marker.html)
+>## [day 18 再談 defs](https://www.oxxostudio.tw/articles/201409/svg-18-defs.html)
+>> 此處著重說明defs的用處同時將前面所有的東西利用定義進行再次說明
+>## [day 19 transform 基礎篇](https://www.oxxostudio.tw/articles/201409/svg-19-transform.html)
+>> 這邊並沒有許多變形並無說明原理，將在２０篇說明
+>## [day 20 transform Matrix](https://www.oxxostudio.tw/articles/201409/svg-20-transform-matrix.html)
+>> 使用變形原理Matrix進行基礎篇效果的展示，很強大！但好難啊＝　＝
+>> 這邊知道就好畢竟我大概短期內無法使用這個方式使用
+>## [day 21 初探 SMIL Animation](https://www.oxxostudio.tw/articles/201409/svg-21-smil-animation.html)
+>## [day 22 深入理解 SMIL Animation](https://www.oxxostudio.tw/articles/201409/svg-22-smil-animation-2.html)
+>## [day 23 理解 viewport 與 viewbox](https://www.oxxostudio.tw/articles/201409/svg-23-viewpoint-viewBox.html)
+>## [day 24 寫 jquery 產生圓餅圖](https://www.oxxostudio.tw/articles/201409/svg-24-jquery-pie-chart.html)
+>> 這邊主要是計算公式和數學
+>## [day 25 再談漸層填色](https://www.oxxostudio.tw/articles/201409/svg-25-gradients-patterns.html)
