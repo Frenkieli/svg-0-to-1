@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    svg {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <svg height="200">
+    <defs>
+      <!-- 製作景深效果 -->
+      <filter width="200" height="200" x="0" y="0" id="blur1" filterUnits="userSpaceOnUse">
+        <feGaussianBlur stdDeviation="10" />
+      </filter>
+      <filter width="200" height="200" x="0" y="0" id="blur2" filterUnits="userSpaceOnUse">
+        <feGaussianBlur stdDeviation="2" />
+      </filter>
+      <filter width="200" height="200" x="0" y="0" id="blur3" filterUnits="userSpaceOnUse">
+        <feGaussianBlur stdDeviation="0" />
+      </filter>
+    </defs>
+    <rect x="30" y="30" width="70" height="70" fill="#a00" filter=url("#blur1") />
+    <circle cx="100" cy="100" r="50" fill="#09a" filter=url("#blur2") />
+    <rect x="100" y="100" width="70" height="70" fill="#fa0" filter=url("#blur3") />
+  </svg>
+  <hr>
+  <svg>
+    <!-- 製作陰影效果,用疊的 -->
+    <defs>
+      <filter width="200" height="200" x="0" y="0" id="blur4" filterUnits="userSpaceOnUse">
+        <feGaussianBlur stdDeviation="5" in="SourceAlpha" />
+      </filter>
+    </defs>
+    <rect x="30" y="35" width="70" height="70" fill="#f00" filter=url("#blur4") />
+    <rect x="30" y="30" width="70" height="70" fill="#6f9" />
+  </svg>
+
+  <svg>
+    <defs>
+      <filter width="200" height="200" x="0" y="0" id="blur5" filterUnits="userSpaceOnUse">
+        <feGaussianBlur stdDeviation="5" />
+      </filter>
+    </defs>
+    <path d="M30 30 L100 30 Q90 65 100 100 L30 100 Q40 65 30 30" fill="#000" filter=url("#blur5") />
+    <rect x="30" y="30" width="70" height="70" fill="#6f9" />
+  </svg>
+</body>
+
+</html>

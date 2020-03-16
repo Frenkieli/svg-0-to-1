@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      /* fill: ; */
+    }
+  </style>
+</head>
+
+<body>
+  <svg>
+    <!-- 
+      用小寫也可以
+      M0 0    是起始點
+      H50     是畫一條水平線到水平座標50
+      V50     是畫一條垂直線到垂直坐標50
+      H25     是畫一條線回到水平座標25
+      L60 10  是畫一條線到坐標60 10
+     -->
+    <path d="M0 0 H50 V50 H25 L60 10" fill="transparent" stroke="#000" />
+  </svg>
+  <br>
+  <svg width="600">
+    <!-- 
+      C40 40,60 40,100,100  是拉一條貝茲曲線到坐標 100 100 第一拉力點40 40第二拉力點 60 40
+      S160 160, 200 100     是拉一條貝茲曲線到坐標 200 100 第一個拉力點是印射上一條線的拉力點
+                            此處是上一條60 40的印射,第二條拉力點是160 160
+     -->
+    <path d="M0 100 C40 40,60 40,100,100 S160 160, 200 100" fill="transparent" stroke="#000" />
+  </svg>
+  <br>
+  <svg>
+    <!-- 
+      Q50 150, 100 100 是拉一條貝茲曲線到坐標 100 00 第一拉力點和第二拉力點共用坐標50 50
+      T200 100        是定義終點位置,會自動調整到與上一條線的過度狀態
+                      此處上一條線是Q50 50
+      Z               是決定是否要拉一條線回到起始點
+    -->
+    <path d="m0 100 Q50 150, 100 100 T200 100Z" fill="transparent" stroke="#000" />
+  </svg>
+</body>
+
+</html>

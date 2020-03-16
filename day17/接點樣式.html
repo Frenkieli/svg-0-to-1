@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    svg {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <svg width="300" height="400">
+    <!-- 接點圖片要先寫進marker -->
+    <defs>
+      <!-- 
+        refX 相對x軸的位移方向 往左
+        refY 相對y軸的位移方向 往上
+        viewBox 可視盒子大小
+       -->
+      <marker id="a1" viewBox="0 0 77 77" refX="20" refY="39" markerWidth="30" markerHeight="30" orient="auto">
+        <path fill="#f00"
+          d="M12.707,38.6C-8.594,27.4-1.594,0,22.406,0c30.3,0,51.7,38.5,51.7,38.5s-22.7,38.6-51.7,38.6 C-1.594,77.1-8.594,49.8,12.707,38.6z">
+        </path>
+      </marker>
+
+      <marker id="a2" viewBox="0 0 80 45" refX="50" refY="22" markerWidth="40" markerHeight="30" orient="auto">
+        <polygon fill="#600" points="65.397,0 0,0 14.173,22.417 0.001,44.833 65.398,44.833 79.569,22.417 " />
+      </marker>
+    </defs>
+    <polyline points="50,20 150,20" fill="none" stroke="black" stroke-width="1" marker-end="url(#a1)"
+      marker-start="url(#a2)"></polyline>
+  </svg>
+  <hr>
+  <svg width="300" height="400">
+    <!-- 接點圖片要先寫進marker -->
+    <defs>
+      <!-- 
+        orient 設定該圖案是否根據圖形轉向
+       -->
+      <marker id="aa1" viewBox="0 0 77 77" refX="20" refY="39" markerWidth="30" markerHeight="30" orient="auto">
+        <path fill="#f00"
+          d="M12.707,38.6C-8.594,27.4-1.594,0,22.406,0c30.3,0,51.7,38.5,51.7,38.5s-22.7,38.6-51.7,38.6 C-1.594,77.1-8.594,49.8,12.707,38.6z">
+        </path>
+      </marker>
+
+      <marker id="aa2" viewBox="0 0 80 45" refX="50" refY="22" markerWidth="40" markerHeight="30" orient="0deg">
+        <polygon fill="#600" points="65.397,0 0,0 14.173,22.417 0.001,44.833 65.398,44.833 79.569,22.417 " />
+      </marker>
+    </defs>
+    <polyline points="50,20 150,20" fill="none" stroke="black" stroke-width="1" marker-end="url(#aa1)"
+      marker-start="url(#aa2)"></polyline>
+    <polyline points="50,50 140,70" fill="none" stroke="black" stroke-width="1" marker-end="url(#aa1)"
+      marker-start="url(#aa2)"></polyline>
+    <polyline points="50,80 130,120" fill="none" stroke="black" stroke-width="1" marker-end="url(#aa1)"
+      marker-start="url(#aa2)"></polyline>
+  </svg>
+  <hr>
+  <!-- 實作 -->
+  <svg width="300" height="400">
+    <!-- 
+      因為繪圖起始點是開接點，所以會感覺有偏移
+      需要用　refX　refY　將其偏移回來
+      圓心再　25 25 所以偏移 25 25 讓他回來
+    -->
+    <defs>
+      <marker id="r" viewBox="0 0 50 50" refX="25" refY="25" markerWidth="10" markerHeight="10" orient="auto">
+        <circle fill="#f00" cx="25" cy="25" r="25" />
+      </marker>
+      <marker id="g" viewBox="0 0 50 50" refX="25" refY="25" markerWidth="10" markerHeight="10" orient="auto">
+        <circle fill="#0f0" cx="25" cy="25" r="25" />
+      </marker>
+      <marker id="b" viewBox="0 0 50 50" refX="25" refY="25" markerWidth="10" markerHeight="10" orient="auto">
+        <circle fill="#00f" cx="25" cy="25" r="25" />
+      </marker>
+    </defs>
+    <polyline points="20,100 50,100 80,20 110,80 140,30 170,100 200,100" fill="none" stroke="black" stroke-width="1"
+      marker-end="url(#b)" marker-start="url(#r)" marker-mid="url(#g)"></polyline>
+  </svg>
+  <hr>
+  <svg width="300" height="400">
+    <defs>
+      <marker id="r1" viewBox="-10 -10 70 70" refX="25" refY="25" markerWidth="15" markerHeight="15" orient="auto">
+        <circle fill="#fff" stroke="#000" stroke-width="10" cx="25" cy="25" r="25" />
+      </marker>
+      <marker id="g1" viewBox="0 0 50 50" refX="25" refY="25" markerWidth="10" markerHeight="10" orient="45">
+        <rect fill="#0a0" width="50" height="50" />
+      </marker>
+      <marker id="b1" viewBox="-10 -10 70 70" refX="25" refY="25" markerWidth="15" markerHeight="15" orient="auto">
+        <circle fill="#f99" stroke="#f00" stroke-width="10" cx="25" cy="25" r="25" />
+      </marker>
+    </defs>
+    <polyline points="20,100 50,100 80,20 110,80 140,30 170,100 200,100" fill="none" stroke="black" stroke-width="1"
+      marker-end="url(#b1)" marker-start="url(#r1)" marker-mid="url(#g1)"></polyline>
+  </svg>
+</body>
+
+</html>

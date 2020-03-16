@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 
+    feBlend ：使用不同的混合模式把兩個對象合成在一起。
+    feColorMatrix ：應用矩陣轉換。( Matrix multiplication )
+    feComponentTransfer ：允許圖片由四個色彩通道重新定義
+    feFuncA、feFuncB、feFuncG、feFuncR
+    feComposite ：混合圖片，可以以百分比的方式進行混合
+    feConvolveMatrix ：透過矩陣運算，做出模糊，邊緣檢測，銳化，浮雕和斜角...等效果。
+    feDiffuseLighting ：使用 alpha channel 計算凹凸
+    feDisplacementMap ：置換每一英吋的圖像
+    feDistantLight ：定義光源
+    fePointLight、feSpecularLighting、feSpotLight
+    feFlood ：重新繪製矩形並和其他物件結合
+    feGaussianBlur ：高斯模糊
+    feImage ：插入一張圖片成為濾鏡
+    feMerge ：不同濾鏡的組合 ( merge )
+    feMergeNode
+    feMorphology
+    feOffset ：移動套用濾鏡的物件位置位置
+    feTile ：讓圖像以重複模式進入濾鏡
+    feTurbulence ：創建震盪與紋理
+  -->
+
+  <!-- 
+    記得回去看　https://www.oxxostudio.tw/articles/201406/svg-10-filter-1.html
+    filterUnits ："userSpaceOnUse | objectBoundingBox" ( 位置以 SVG 畫面為主，還是以套用的物件為主 )
+    primitiveUnits ： "userSpaceOnUse | objectBoundingBox" ( 預設 userSpaceOnUse )
+    filterRes ： 該屬性定義了中間緩存區域的大小，通常不需要提供
+    通常會這樣寫
+    <defs>
+      <filter id="id名" x="0" y="0" width="100%" height="100%" filterUnits="userSpaceOnUse">
+        濾鏡
+      </filter>
+    </defs>
+   -->
+</body>
+
+</html>

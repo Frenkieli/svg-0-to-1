@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    svg {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <svg>
+    <defs>
+      <!-- 高斯模糊參數並不多，記得將　filterUnits　設定依據　svg　-->
+      <filter width="200" height="200" x="0" y="0" id="blur" filterUnits="userSpaceOnUse">
+        <feGaussianBlur stdDeviation="1" />
+      </filter>
+    </defs>
+    <rect x="30" y="30" width="70" height="70" fill="#a00" filter=url("#blur") />
+  </svg>
+  <svg>
+    <defs>
+      <!-- 高斯模糊參數並不多，記得將　filterUnits　設定依據　svg　-->
+      <filter width="200" height="200" x="0" y="0" id="blur2" filterUnits="userSpaceOnUse">
+        <feGaussianBlur stdDeviation="5" />
+      </filter>
+    </defs>
+    <rect x="30" y="30" width="70" height="70" fill="#a00" filter=url("#blur2") />
+  </svg>
+  <svg>
+    <defs>
+      <!-- 高斯模糊參數並不多，記得將　filterUnits　設定依據　svg　-->
+      <filter width="200" height="200" x="0" y="0" id="blur3" filterUnits="userSpaceOnUse">
+        <feGaussianBlur stdDeviation="10" />
+      </filter>
+    </defs>
+    <rect x="30" y="30" width="70" height="70" fill="#a00" filter=url("#blur3") />
+  </svg>
+  <hr>
+  <svg>
+    <!-- 可以針對方向去模糊 -->
+    <defs>
+      <filter width="200" height="200" x="0" y="0" id="blur4" filterUnits="userSpaceOnUse">
+        <feGaussianBlur stdDeviation="1 15" />
+      </filter>
+    </defs>
+    <rect x="30" y="30" width="70" height="70" fill="#ff4500" filter=url("#blur4") />
+  </svg>
+  <svg>
+    <!-- 可以針對方向去模糊 -->
+    <defs>
+      <filter width="200" height="200" x="0" y="0" id="blur5" filterUnits="userSpaceOnUse">
+        <feGaussianBlur stdDeviation="15 1" />
+      </filter>
+    </defs>
+    <rect x="30" y="30" width="70" height="70" fill="#ff4500" filter=url("#blur5") />
+  </svg>
+</body>
+
+</html>

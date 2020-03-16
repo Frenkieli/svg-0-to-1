@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 
+    rx ： 橢圓的 x 軸半徑 ( 根據不同的終點換算成比例 )
+    ry ： 橢圓的 y 軸半徑 ( 根據不同的終點換算成比例 )
+    x-axis-rotation ： 弧線與 x 軸的夾角
+    large-arc-flag ： 1 為大角度弧線，0 為小角度弧線 ( 必須有三個點 )
+    sweep-flag ： 1 為順時針方向，0 為逆時針方向
+    x ： 終點 x 座標
+    y ： 終點 y 座標
+   -->
+  <svg width="500" height="600">
+    <!-- 
+       rx ry 會自動換算成對應比例
+      -->
+    <path d="M400 100 A2 1,0 0 0 450 500" stroke="#000" fill="none" />
+  </svg>
+  <br>
+  <svg width="500" height="600">
+    <!-- 
+        改變 sweep-flag 讓其相反
+    -->
+    <path d="M100 100 A2 1,0 0 1 50 500" stroke="#000" fill="none" />
+  </svg>
+  <br>
+  <svg>
+    <!-- 
+      large-arc-flag 角度弧線
+      詳細教學可參照
+
+      https://www.oxxostudio.tw/articles/201406/svg-05-path-2.html
+
+      對於大角度的教學
+     -->
+    <!-- 大角度 ( 黑色線 ) -->
+    <path d="M0 0 L50 50 A50 50,0 1 0 100 0" stroke="#000" fill="none" />
+
+    <!-- 小角度 ( 紅色線 ) -->
+    <path d="M0 0 L50 50 A50 50,0 0 0 100 0" stroke="#f00" fill="none" />
+  </svg>
+  <br>
+  <svg>
+    <!-- 夾角 0 度 ( 黑色線 ) -->
+    <path d="M0 0 A50 100,0 0 0 100 0" stroke="#000" fill="none" />
+
+    <!-- 夾角 30 度 ( 紅色線 ) -->
+    <path d="M0 0 A50 100,30 0 0 100 0" stroke="#f00" fill="none" />
+
+    <!-- 夾角 60 度 ( 橘色線 ) -->
+    <path d="M0 0 A50 100,60 0 0 100 0" stroke="#f90" fill="none" />
+  </svg>
+</body>
+
+</html>

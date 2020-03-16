@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    svg {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <svg width="300" height="500">
+    <defs>
+      <!-- type = table  -->
+      <filter id="table" filterUnits="userSpaceOnUse" x="0" y="200" width="300" height="200">
+        <feComponentTransfer>
+          <feFuncR type="table" tableValues="0.0 0.7 0.9 1.0" />
+          <feFuncG type="table" tableValues=".2 0.7 0.9 1.0" />
+          <feFuncB type="table" tableValues=".2 0.7 0.9 1.0" />
+        </feComponentTransfer>
+      </filter>
+    </defs>
+    <image x="0" y="0" width="300" height="200" xlink:href="20140621_1_09.png" />
+    <image x="0" y="200" width="300" height="200" xlink:href="20140621_1_09.png" filter="url(#table)" />
+  </svg>
+  <hr>
+  <!-- type="discrete" 離散 -->
+  <svg width="300" height="500">
+    <defs>
+      <filter id="discrete" filterUnits="userSpaceOnUse" x="0" y="200" width="300" height="200">
+        <feComponentTransfer>
+          <feFuncR type="discrete" tableValues="0.0 1.0 1.0 1.0" />
+          <feFuncG type="discrete" tableValues="0.0 0.5 0.5 0.9" />
+          <feFuncB type="discrete" tableValues="0.0 0.6" />
+        </feComponentTransfer>
+      </filter>
+    </defs>
+    <image x="0" y="0" width="300" height="200" xlink:href="20140621_1_09.png" />
+    <image x="0" y="200" width="300" height="200" xlink:href="20140621_1_09.png" filter="url(#discrete)" />
+  </svg>
+  <hr>
+  <!-- type="linear" 線性 -->
+  <svg width="8cm" height="100%" viewBox="0 0 800 800">
+    <defs>
+      <linearGradient id="MyGradient" gradientUnits="userSpaceOnUse" x1="100" y1="0" x2="600" y2="0">
+        <stop offset="0" stop-color="#000000" />
+        <stop offset=".3" stop-color="#00ff00" />
+        <stop offset=".6" stop-color="#0000ff" />
+        <stop offset="1" stop-color="#ff0000" />
+      </linearGradient>
+      <filter id="Linear" filterUnits="objectBoundingBox" x="0%" y="0%" width="100%" height="100%">
+        <feComponentTransfer>
+          <feFuncR type="linear" slope="0" intercept="0" />
+          <feFuncG type="linear" slope="0" intercept="0" />
+          <feFuncB type="linear" slope="1" intercept="0" />
+        </feComponentTransfer>
+      </filter>
+    </defs>
+    <rect x="100" y="420" width="600" height="60" fill="url(#MyGradient)" />
+    <rect x="100" y="490" width="600" height="60" fill="url(#MyGradient)" filter="url(#Linear)" />
+  </svg>
+  <hr>
+  <svg width="300" height="500">
+    <defs>
+      <filter id="Linear1" filterUnits="objectBoundingBox" x="0%" y="0%" width="100%" height="100%">
+        <feComponentTransfer>
+          <feFuncR type="linear" slope="0" intercept="0" />
+          <feFuncG type="linear" slope="1" intercept="0" />
+          <feFuncB type="linear" slope="1" intercept="0" />
+        </feComponentTransfer>
+      </filter>
+    </defs>
+    <image x="0" y="0" width="300" height="200" xlink:href="20140621_1_09.png" />
+    <image x="0" y="200" width="300" height="200" xlink:href="20140621_1_09.png" filter="url(#Linear1)" />
+  </svg>
+  <hr>
+    <!-- type="gamma" 線性 -->
+  <svg width="8cm" height="100%" viewBox="0 0 800 800">
+    <defs>
+      <linearGradient id="MyGradient" gradientUnits="userSpaceOnUse" x1="100" y1="0" x2="600" y2="0">
+        <stop offset="0" stop-color="#000000" />
+        <stop offset=".3" stop-color="#00ff00" />
+        <stop offset=".6" stop-color="#0000ff" />
+        <stop offset="1" stop-color="#ff0000" />
+      </linearGradient>
+      <filter id="Gamma" filterUnits="objectBoundingBox" x="0%" y="0%" width="100%" height="100%">
+        <feComponentTransfer>
+          <feFuncR type="gamma" amplitude="2" exponent="5" offset="0" />
+          <feFuncG type="gamma" amplitude="2" exponent="3" offset="0" />
+          <feFuncB type="gamma" amplitude="2" exponent="1" offset="0" />
+        </feComponentTransfer>
+      </filter>
+    </defs>
+    <rect x="100" y="420" width="600" height="60" fill="url(#MyGradient)" />
+    <rect x="100" y="490" width="600" height="60" fill="url(#MyGradient)" filter="url(#Gamma)" />
+  </svg>
+  <hr>
+  <svg width="300" height="500">
+    <defs>
+      <filter id="Gamma1" filterUnits="objectBoundingBox" x="0%" y="0%" width="100%" height="100%">
+        <feComponentTransfer>
+          <feFuncR type="gamma" amplitude="2" exponent="5" offset="0" />
+          <feFuncG type="gamma" amplitude="2" exponent="3" offset="0" />
+          <feFuncB type="gamma" amplitude="2" exponent="1" offset="0" />
+        </feComponentTransfer>
+      </filter>
+    </defs>
+    <image x="0" y="0" width="300" height="200" xlink:href="20140621_1_09.png" />
+    <image x="0" y="200" width="300" height="200" xlink:href="20140621_1_09.png" filter="url(#Gamma1)" />
+  </svg>
+</body>
+
+</html>
