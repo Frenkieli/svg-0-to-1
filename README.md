@@ -19,7 +19,7 @@
 >## [day 11 濾鏡 filter - feColorMatrix 色彩矩陣](https://www.oxxostudio.tw/articles/201406/svg-11-filter-feColorMatrix.html)
 >## [day 12 pie chart 圓餅圖實作](https://www.oxxostudio.tw/articles/201406/svg-12-pie-chart.html)
 >> 會用到程式和公式！記得回來複習
->## [day 13 濾鏡　filter - feGaussianBlur 高斯模糊](https://www.oxxostudio.tw/articles/201406/svg-13-filter-feGaussianBlur.html)
+>## [day 13 濾鏡 filter - feGaussianBlur 高斯模糊](https://www.oxxostudio.tw/articles/201406/svg-13-filter-feGaussianBlur.html)
 >## [day 14 控制 SVG 的注意事項](https://www.oxxostudio.tw/articles/201406/svg-14-control-SVG.html)
 >> 這一段沒有練習請一定要看這篇文章
 >>>　因為svg將屬性區分成properties和attributes所以css只能控制properties的屬性
@@ -41,3 +41,19 @@
 >## [day 24 寫 jquery 產生圓餅圖](https://www.oxxostudio.tw/articles/201409/svg-24-jquery-pie-chart.html)
 >> 這邊主要是計算公式和數學
 >## [day 25 再談漸層填色](https://www.oxxostudio.tw/articles/201409/svg-25-gradients-patterns.html)
+>## [day 26 有趣的 Patterns 圖案樣式](https://www.oxxostudio.tw/articles/201409/svg-26-patterns.html)
+>## [day 27 濾鏡 filter - feImage 圖片濾鏡](https://www.oxxostudio.tw/articles/201410/svg-27-filter-feImage.html)
+
+    下面兩個有點怪怪的沒有作用
+    目前查到的資料是向下方這樣值使用相容性不高同時可能觸發bug等等
+    有查到其他範例檔！但是需要用程式和計算數學公式...數學公式你又回來啦＝　＝＂
+>## [day 28 濾鏡 filter - feDisplacementMap 移置特效](https://www.oxxostudio.tw/articles/201410/svg-28-filter-feDisplacementMap.html)
+>## [day 29 濾鏡 filter - feDisplacementMap 水波效果示範](https://www.oxxostudio.tw/articles/201410/svg-28-filter-feDisplacementMap.html)
+    所以接續day30繼續看
+>## [day 30 濾鏡 filter - feConvolveMatrix 銳利化](https://www.oxxostudio.tw/articles/201410/svg-28-filter-feDisplacementMap.html)
+    太棒了！？這又是數學　＝　＝＂
+
+<!-- 
+  水波效果用
+  http://fian.my.id/Waves/
+ -->

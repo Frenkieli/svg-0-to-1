@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  這邊直接記效果吧！
+  <img src="20141020_1_demo.png" alt="">
+  <style>
+    img {
+      position: fixed;
+      top: 100px;
+      left: 350px;
+    }
+  </style>
+  <h1>模糊化</h1>
+  <svg width="600" height="300">
+    <!-- 模糊化 -->
+    <defs>
+      <filter id="aaa">
+        <feConvolveMatrix order="3" kernelMatrix="
+        1  1  1    
+        1  1  1    
+        1  1  1" edgeMode="none">
+        </feConvolveMatrix>
+      </filter>
+    </defs>
+    <image x="0" y="0" xlink:href="20141020_1_demo.png" filter="url(#aaa)"></image>
+  </svg>
+  <hr>
+  <h1>模糊化2</h1>
+  <svg width="600" height="300">
+    <!-- 模糊化 -->
+    <defs>
+      <filter id="bbb">
+        <feConvolveMatrix order="3" kernelMatrix="
+        3  0  3    
+        0  0  0   
+        3  0  3" edgeMode="none">
+        </feConvolveMatrix>
+      </filter>
+    </defs>
+    <image x="0" y="0" xlink:href="20141020_1_demo.png" filter="url(#bbb)"></image>
+  </svg>
+  <hr>
+  <h1>銳利化</h1>
+  <svg width="600" height="300">
+    <!-- 模糊化 -->
+    <defs>
+      <filter id="ccc">
+        <feConvolveMatrix order="3" kernelMatrix="
+        0  -1  0   
+        -1  5  -1   
+        0  -1  0" edgeMode="none">
+        </feConvolveMatrix>
+      </filter>
+    </defs>
+    <image x="0" y="0" xlink:href="20141020_1_demo.png" filter="url(#ccc)"></image>
+  </svg>
+  <hr>
+  <h1>銳利化</h1>
+  <svg width="600" height="300">
+    <!-- 模糊化 -->
+    <defs>
+      <filter id="ddd">
+        <feConvolveMatrix order="3" kernelMatrix="
+        0 -2  0    
+       -2  15 -2    
+        0 -2  0" edgeMode="none">
+        </feConvolveMatrix>
+      </filter>
+    </defs>
+    <image x="0" y="0" xlink:href="20141020_1_demo.png" filter="url(#ddd)"></image>
+  </svg>
+  <hr>
+  <h1>邊緣化</h1>
+  <svg width="600" height="300">
+    <!-- 模糊化 -->
+    <defs>
+      <filter id="eee">
+        <feConvolveMatrix order="3" kernelMatrix="
+        1  1  1    
+        1 -6  1    
+        1  1  1" edgeMode="none">
+        </feConvolveMatrix>
+      </filter>
+    </defs>
+    <image x="0" y="0" xlink:href="20141020_1_demo.png" filter="url(#eee)"></image>
+  </svg>
+  <hr>
+  <h1>浮雕</h1>
+  <svg width="600" height="300">
+    <!-- 模糊化 -->
+    <defs>
+      <filter id="fff">
+        <feConvolveMatrix order="3" kernelMatrix="
+        -2 -1  0    
+        -1  1  1    
+         0  1  2" edgeMode="none">
+        </feConvolveMatrix>
+      </filter>
+    </defs>
+    <image x="0" y="0" xlink:href="20141020_1_demo.png" filter="url(#fff)"></image>
+  </svg>
+  <hr>
+  <h1>浮雕</h1>
+  <svg width="600" height="300">
+    <!-- 模糊化 -->
+    <defs>
+      <filter id="ggg">
+        <feConvolveMatrix order="3" kernelMatrix="
+        -9 -2  0    
+        -2  1  2    
+         0  2  9" edgeMode="none">
+        </feConvolveMatrix>
+      </filter>
+    </defs>
+    <image x="0" y="0" xlink:href="20141020_1_demo.png" filter="url(#ggg)"></image>
+  </svg>
+  <hr>
+  <h1>浮雕</h1>
+  <svg width="600" height="300">
+    <!-- 模糊化 -->
+    <defs>
+      <filter id="hhh">
+        <feConvolveMatrix order="3" kernelMatrix="
+        2  0  0    
+        0 -1  0    
+        0  0 -1" edgeMode="none" bias="0.5">
+        </feConvolveMatrix>
+      </filter>
+    </defs>
+    <image x="0" y="0" xlink:href="20141020_1_demo.png" filter="url(#hhh)"></image>
+  </svg>
+  <hr>
+</body>
+
+</html>

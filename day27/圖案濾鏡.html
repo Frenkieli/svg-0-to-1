@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  svg {
+    vertical-align: top;
+  }
+</style>
+
+<body>
+  <svg width="360" height="220">
+    <defs>
+      <!-- 
+        套用的圖章會自動超出邊寬和放大
+        這是因為部分filter在不放大內容的情下有可能造成白邊
+        所以filter會統一全部放大到1.2倍和偏移到左上角
+      -->
+      <filter id="f">
+        <feImage xlink:href="http://www.oxxostudio.tw/img/articles/201410/20141003_1_demo.jpg" />
+      </filter>
+    </defs>
+    <rect x="30" y="30" width="150" height="150" filter="url(#f)" />
+    <rect x="30" y="30" width="150" height="150" stroke="#00f" fill="none" />
+    <rect x="0" y="0" width="360" height="220" stroke="#000" fill="none" stroke-width="2" />
+  </svg>
+  <svg width="360" height="220">
+    <!-- 
+
+     -->
+    <defs>
+      <filter id="f2">
+        <feImage xlink:href="http://www.oxxostudio.tw/img/articles/201410/20141003_1_demo.jpg" x="0" y="0" width="100"
+          height="100" />
+      </filter>
+    </defs>
+    <rect x="30" y="30" width="150" height="150" filter="url(#f2)" />
+    <rect x="30" y="30" width="150" height="150" stroke="#00f" fill="none" />
+  </svg>
+  <hr>
+  <svg height="300">
+    <!-- 
+      primitiveUnits="objectBoundingBox"
+      依照比例大小
+      圖片變成了 1.5 倍大
+      然後套用的圖案大小是 150 150 固 大小變成 225 225 然後只顯示 150 * 10% 就是 165的大小
+    -->
+    <defs>
+      <filter id="f3" primitiveUnits="objectBoundingBox">
+        <feImage xlink:href="http://www.oxxostudio.tw/img/articles/201410/20141003_1_demo.jpg" x="0" y="0" width="1.5"
+          height="1.5" />
+      </filter>
+    </defs>
+    <rect x="30" y="30" width="150" height="150" filter="url(#f3)" />
+    <rect x="30" y="30" width="150" height="150" stroke="#00f" fill="none" />
+  </svg>
+  <svg height="300">
+    <!-- 
+
+      如果不想要多出那 10% 可以直接設定filter大小讓他不突出去！當然也可以更突出去!
+     -->
+    <defs>
+      <!-- <filter id="f4" primitiveUnits="objectBoundingBox" x="0" y="0" width="1.1" height="1.1"> -->
+      <filter id="f4" primitiveUnits="objectBoundingBox" x="0" y="0" width="1" height="1">
+        <feImage xlink:href="http://www.oxxostudio.tw/img/articles/201410/20141003_1_demo.jpg" x="0" y="0" width="1.5"
+          height="1.5" />
+      </filter>
+    </defs>
+    <rect x="30" y="30" width="150" height="150" filter="url(#f4)" />
+    <rect x="30" y="30" width="150" height="150" stroke="#00f" fill="none" />
+  </svg>
+  <svg height="300">
+    <!-- 
+      當然也可以在圖案內設定大小
+      但是感覺會不一樣喔
+      當然也可以縮小
+     -->
+    <defs>
+      <filter id="f5" primitiveUnits="objectBoundingBox">
+        <!-- <feImage xlink:href="http://www.oxxostudio.tw/img/articles/201410/20141003_1_demo.jpg" x="0" y="0" width="1" height="1" /> -->
+        <feImage xlink:href="http://www.oxxostudio.tw/img/articles/201410/20141003_1_demo.jpg" x="0" y="0" width="0.5"
+          height="0.5" />
+      </filter>
+    </defs>
+    <rect x="30" y="30" width="150" height="150" filter="url(#f5)" />
+    <rect x="30" y="30" width="150" height="150" stroke="#00f" fill="none" />
+  </svg>
+  <hr>
+  <svg height="300">
+    <defs>
+      <!-- 
+        preserveAspectRatio="xMidYMax slice"
+        可以設定圖章在因維持比例超出範圍應該對齊的位置
+        跟 css 背景圖片位置很像
+       -->
+      <filter id="f6" primitiveUnits="objectBoundingBox" x="0" y="0" width="1" height="1">
+        <!-- <feImage xlink:href="http://www.oxxostudio.tw/img/articles/201410/20141003_1_demo.jpg" width="1" height="1"
+          preserveAspectRatio="xMidYMax slice" /> -->
+        <feImage xlink:href="http://www.oxxostudio.tw/img/articles/201410/20141003_1_demo.jpg" width=".2" height="1"
+          preserveAspectRatio="xMaxYMax slice" />
+      </filter>
+    </defs>
+    <rect x="30" y="30" width="250" height="150" filter="url(#f6)" />
+    <rect x="30" y="30" width="250" height="150" stroke="#00f" fill="none" />
+  </svg>
+  <hr>
+  <svg height="300">
+    <defs>
+      <!-- 
+        視口是 1 : 1 所以和物件同寬同寬
+        內容物 則必須依靠調整比例讓他完美拼合
+      -->
+
+      <!-- <filter id="f7">
+        <feImage xlink:href="http://www.oxxostudio.tw/img/articles/201410/20141003_1_demo.jpg" width="100" height="100"/>
+        <feTile/> -->
+      <!-- 
+          上面的我覺得比較輕鬆就可以拼合了 不用比例= =
+          但是下面的用起來效果較好
+        -->
+      <filter id="f7" primitiveUnits="objectBoundingBox" x="0" y="0" width="1" height="1">
+        <feImage xlink:href="http://www.oxxostudio.tw/img/articles/201410/20141003_1_demo.jpg" width=".2"
+          height=".33" />
+        <feTile />
+      </filter>
+    </defs>
+    <rect x="30" y="30" width="250" height="150" filter="url(#f7)" />
+    <rect x="30" y="30" width="250" height="150" stroke="#00f" fill="none" />
+  </svg>
+  <hr>
+  <svg height="300">
+    <!-- 可以切割圖章 -->
+    <defs>
+      <filter id="f8" primitiveUnits="objectBoundingBox" x="0" y="0" width="1" height="1">
+        <feImage xlink:href="http://www.oxxostudio.tw/img/articles/201410/20141003_1_demo.jpg" width=".2"
+          height="1" preserveAspectRatio="xMidYMax slice" />
+        <feTile />
+        <feTile />
+    </defs>
+    <rect x="30" y="30" width="250" height="150" filter="url(#f8)" />
+    <rect x="30" y="30" width="250" height="150" stroke="#00f" fill="none" />
+  </svg>
+</body>
+
+</html>

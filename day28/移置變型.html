@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* body {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3CradialGradient id='r' cx='.5' cy='.5' r='.8'%3E%3Cstop offset='0' stop-color='%23000'%3E%3Canimate attributeName='offset' to='.2' dur='1s' repeatCount='indefinite'%3E%3C/animate%3E%3C/stop%3E%3Cstop offset='.1' stop-color='%23f00'%3E%3Canimate attributeName='offset' to='.3' dur='1s' repeatCount='indefinite'%3E%3C/animate%3E%3C/stop%3E%3Cstop offset='.2' stop-color='%23000'%3E%3Canimate attributeName='offset' to='.4' dur='1s' repeatCount='indefinite'%3E%3C/animate%3E%3C/stop%3E%3Cstop offset='.3' stop-color='%23f00'%3E%3Canimate attributeName='offset' to='.5' dur='1s' repeatCount='indefinite'%3E%3C/animate%3E%3C/stop%3E%3Cstop offset='.4' stop-color='%23000'%3E%3Canimate attributeName='offset' to='.6' dur='1s' repeatCount='indefinite'%3E%3C/animate%3E%3C/stop%3E%3Cstop offset='.5' stop-color='%23f00'%3E%3Canimate attributeName='offset' to='.7' dur='1s' repeatCount='indefinite'%3E%3C/animate%3E%3C/stop%3E%3Cstop offset='.6' stop-color='%23000'%3E%3Canimate attributeName='offset' to='.8' dur='1s' repeatCount='indefinite'%3E%3C/animate%3E%3C/stop%3E%3Cstop offset='.7' stop-color='%23f00'%3E%3Canimate attributeName='offset' to='.9' dur='1s' repeatCount='indefinite'%3E%3C/animate%3E%3C/stop%3E%3Cstop offset='.8' stop-color='%23000'%3E%3Canimate attributeName='offset' to='1' dur='1s' repeatCount='indefinite'%3E%3C/animate%3E%3C/stop%3E%3Cstop offset='.9' stop-color='%23f00'%3E%3Canimate attributeName='offset' to='1.1' dur='1s' repeatCount='indefinite'%3E%3C/animate%3E%3C/stop%3E%3C/radialGradient%3E%3C/defs%3E%3Crect x='0' y='0' width='340' height='231' fill='url(%23r)'%3E%3C/rect%3E%3C/svg%3E");
+    } */
+  </style>
+</head>
+
+<body>
+    
+  <!-- <svg width="340" height="231">
+    <defs>
+      <filter id="f" filterUnits="objectBoundingBox" primitiveUnits="objectBoundingBox" x="0" y="0" width="1.1" height="1.1">
+        <feImage result="pict1" xlink:href="#m1" x="0" y="0" width="1.1" height="1.1"></feImage>
+        <feImage result="pict2" xlink:href="#m2" x="0" y="0" width="1.1" height="1.1"></feImage>
+        <feDisplacementMap id="fdm" scale=".1" xChannelSelector="R" yChannelSelector="R" in2="pict2" in="pict1"></feDisplacementMap>
+      </filter>
+      <radialGradient id="g" cx=".6" cy=".6" r=".05" spreadMethod="reflect">
+        <stop offset="0" stop-color="#000"></stop>
+        <stop offset="1" stop-color="#fff"></stop>
+      </radialGradient>
+      <rect id="m2" x="-10" y="0" width="410" height="300" fill="url(#g)"></rect>
+      <image id="m1" x="0" y="0" width="400" height="300" xlink:href="http://www.oxxostudio.tw/img/articles/201410/20141009_1_demo3.JPG"></image>
+    </defs>
+    <rect x="0" y="0" width="400" height="300" filter="url(#f)" transform="translate(-60 -60)"></rect>
+  </svg> -->
+
+  <!-- <svg id="qqq" width="340" height="231">
+    <defs>
+      <radialGradient id="r" cx=".5" cy=".5" r=".8">
+        <stop offset="0" stop-color="#000">
+          <animate attributeName="offset" to=".2" dur="1s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset=".1" stop-color="#f00">
+          <animate attributeName="offset" to=".3" dur="1s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset=".2" stop-color="#000">
+          <animate attributeName="offset" to=".4" dur="1s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset=".3" stop-color="#f00">
+          <animate attributeName="offset" to=".5" dur="1s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset=".4" stop-color="#000">
+          <animate attributeName="offset" to=".6" dur="1s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset=".5" stop-color="#f00">
+          <animate attributeName="offset" to=".7" dur="1s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset=".6" stop-color="#000">
+          <animate attributeName="offset" to=".8" dur="1s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset=".7" stop-color="#f00">
+          <animate attributeName="offset" to=".9" dur="1s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset=".8" stop-color="#000">
+          <animate attributeName="offset" to="1" dur="1s" repeatCount="indefinite"></animate>
+        </stop>
+        <stop offset=".9" stop-color="#f00">
+          <animate attributeName="offset" to="1.1" dur="1s" repeatCount="indefinite"></animate>
+        </stop>
+      </radialGradient>
+    </defs>
+    <rect x="0" y="0" width="340" height="231" fill="url(#r)"></rect>
+  </svg> -->
+
+  <svg width="400" height="300" filter="url(#f3)">
+    <filter id="f3" filterUnits="objectBoundingBox" width="340" height="231">
+      <feImage result="pict1111"
+        xlink:href=""
+        x="0" y="0" width="400" height="300"></feImage>
+      <feDisplacementMap scale="20" xChannelSelector="R" yChannelSelector="R" in2="pict1111" in="SourceGraphic">
+      </feDisplacementMap>
+    </filter>
+    <pattern id="imageFill" width="1" height="1" viewBox="0 0 300 300">
+      <image id="ripples" width="400" height="300" xlink:href="" />
+    </pattern>
+    <image  x="0" y="0" width="400" height="300"
+      xlink:href="http://www.oxxostudio.tw/img/articles/201410/20141009_1_demo3.JPG"></image>
+  </svg>
+  <!-- <h4>SVG waves with feDisplacementMap</h4>
+  <p>Working on Chrome, Opera, Firefox & Edge</p>
+  <div>
+    <svg width="300" height="300">
+      <desc>First SVG: definitions and the radial gradient used for the feDisplacementMap filter</desc>
+      <defs>
+
+        <filter id="f" primitiveUnits="objectBoundingBox">
+          <feImage result="pict2" xlink:href=""></feImage>
+          <feDisplacementMap scale=".05" xChannelSelector="R" yChannelSelector="R" in2="pict2" in="SourceGraphic">
+          </feDisplacementMap>
+        </filter>
+
+
+        <pattern id="imageFill" width="1" height="1" viewBox="0 0 300 300">
+          <image id="ripples" width="300" height="300" xlink:href="" />
+        </pattern>
+      </defs>
+
+      <rect id="witness" width="300" height="300" fill="url(#imageFill)"></rect>
+    </svg>
+
+    <svg width="300" height="300">
+      <desc>Forth SVG: image affected by the feDisplacementMap filter</desc>
+      <image id="Darwin" xmlns:xlink="http://www.w3.org/1999/xlink"
+        xlink:href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/222579/beagle400.jpg" width="300" height="300"
+        filter="url(#f)"></image>
+    </svg>
+  </div> -->
+
+  <script>
+    const filterFeImage = document.querySelector("#f3 feImage");
+    const xlink = "http://www.w3.org/1999/xlink";
+    var ripples = document.getElementById('imageFill')
+    let displacement = 0;
+    let speed = 0.2;
+
+    function setXlinkHref() {
+      /*
+      <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width="300" height="300">
+      <defs>
+        <radialGradient id="rg" r=".9"> 
+      */
+      let xlinkHref =
+        "data:image/svg+xml;utf8,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='300' height='300'%3E%3Cdefs%3E%3CradialGradient id='rg' r='.9'%3E";
+      /*
+          <stop offset='0%' stop-color='#f00'></stop>
+          <stop offset='10% 'stop-color='#000'></stop>
+          <stop offset='20%' stop-color='#f00'></stop>
+          <stop offset='30%' stop-color='#000'></stop>
+          <stop offset='40%' stop-color='#f00'></stop>
+          <stop offset='50%' stop-color='#000'></stop>
+          <stop offset='60%' stop-color='#f00'></stop>
+          <stop offset='70%' stop-color='#000'></stop>
+          <stop offset='80% 'stop-color='#f00'></stop>
+          <stop offset='90%' stop-color='#f00'></stop> 
+          <stop offset='100%' stop-color='#f00'></stop>
+    */
+    // 這邊一樣算公式
+      for (var i = 0; i < 11; i += 1) {
+        xlinkHref += `%3Cstop 
+                offset='${(i - 2) * 10 + displacement}%25' 
+                stop%2Dcolor='%23${i % 2 == 0 ? "f00" : "000"}'%3E%3C/stop%3E`;
+      }
+
+      /*
+    </radialGradient> 
+    <rect id="witness" width="300" height="300" fill="url(#rg)"></rect>*/
+
+      xlinkHref +=
+        "%3C/radialGradient%3E%3C/defs%3E%3Crect id='witness' width='300' height='300' fill='url(%23rg)'%3E%3C/rect%3E%3C/svg%3E";
+
+      return xlinkHref;
+    }
+
+    function AnimateOffset() {
+      let xlinkHref = setXlinkHref();
+      filterFeImage.setAttributeNS(xlink, "href", xlinkHref);
+      ripples.setAttributeNS(xlink, "href", xlinkHref);
+      // console.log(ripples);
+      if (displacement <= 20) {
+        displacement += speed;
+      } else {
+        displacement = 0;
+      }
+
+      window.requestAnimationFrame(AnimateOffset);
+    }
+
+    window.requestAnimationFrame(AnimateOffset);
+  </script>
+
+  <!-- 
+    參考這個製作
+    https://codepen.io/enxaneta/post/svg-waves-with-fedisplacementmap
+   -->
+</body>
+
+</html>
