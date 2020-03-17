@@ -47,6 +47,7 @@
     下面兩個有點怪怪的沒有作用
     目前查到的資料是向下方這樣值使用相容性不高同時可能觸發bug等等
     有查到其他範例檔！但是需要用程式和計算數學公式...數學公式你又回來啦＝　＝＂
+    https://codepen.io/enxaneta/post/svg-waves-with-fedisplacementmap
 >## [day 28 濾鏡 filter - feDisplacementMap 移置特效](https://www.oxxostudio.tw/articles/201410/svg-28-filter-feDisplacementMap.html)
 >## [day 29 濾鏡 filter - feDisplacementMap 水波效果示範](https://www.oxxostudio.tw/articles/201410/svg-28-filter-feDisplacementMap.html)
     所以接續day30繼續看
