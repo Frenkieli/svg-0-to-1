@@ -14,6 +14,7 @@
     .div{
       width: 100%;
       height: 100vh;
+      background: url("20180319090858589.jpg");
     }
     .div svg{
       width: 100%;
@@ -50,7 +51,7 @@
     let svg = document.getElementById('svg');
     let width = div.offsetWidth;
     let height = div.offsetHeight;
-    svg.innerHTML = '<g id="svgandg" filter="url(#f)"><image id="Darwin" xmlns:xlink="http://www.w3.org/1999/xlink"xlink:href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/222579/beagle400.jpg" width="' + width + '" height="'+ height +'"></image><text id="text" text-anchor="middle" x="' + (width / 2) +'" y="' + (height / 2) +'" style="font-size:180px;font-weight:900;"> How Are You </text></g>';
+    svg.innerHTML = '<g id="svgandg" filter="url(#f)"><image id="Darwin" xmlns:xlink="http://www.w3.org/1999/xlink"xlink:href="20180319090858589.jpg" width="' + width + '" height="'+ height +'"></image><text id="text" text-anchor="middle" x="' + (width / 2) +'" y="' + (height / 2) +'" style="font-size:180px;font-weight:900;"> How Are You </text></g>';
 
     let displacement = 0;
     let speed = 0.2;
@@ -105,9 +106,11 @@
 
       // window.requestAnimationFrame(AnimateOffset);
     }
+
+    // 設定楨數的地方
     setInterval(() => {
       AnimateOffset();
-    }, 45);
+    }, 66);
     // window.requestAnimationFrame(AnimateOffset);
   </script>
 </body>
