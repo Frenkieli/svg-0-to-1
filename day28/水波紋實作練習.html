@@ -29,6 +29,7 @@
       <filter id="f" primitiveUnits="objectBoundingBox">
         <feImage result="pict2" xlink:href=""></feImage>
         <feDisplacementMap scale=".05" xChannelSelector="R" yChannelSelector="R" in2="pict2" in="SourceGraphic">
+          <!-- 需要重複漣漪所以需要改能用透明度去互相覆蓋 -->
         </feDisplacementMap>
       </filter>
     </defs>
@@ -78,8 +79,10 @@
           <stop offset='100%' stop-color='#f00'></stop>
     */
       for (var i = 0; i < 11; i++) {
+
+        // offset='${(i - 2) * 20 + displacement * 2}%25'  可以控制每一個波的波長
         xlinkHref += `%3Cstop 
-                offset='${(i - 2) * 10 + displacement}%25' 
+                offset='${(i - 2) * 20 + displacement * 2}%25' 
                 stop%2Dcolor='%23${i % 2 == 0 ? "f00" : "000"}'%3E%3C/stop%3E`;
       }
 
